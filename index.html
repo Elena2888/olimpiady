@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Подготовка к олимпиадам в подарок — Сотка</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f6fb;--surface:#fff;--ink:#14204a;--muted:#555f80;--line:#d9dfee;--brand:#2a3fd1;--on-brand:#fff;--gold:#ffc83d;--on-gold:#14204a;--soft:#e6eaff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1330;--surface:#171e45;--ink:#eef0ff;--muted:#a9b1d6;--line:#2b3566;--brand:#7c8cff;--on-brand:#0e1330;--gold:#ffc83d;--on-gold:#14204a;--soft:#1e2759}}
+:root[data-theme="dark"]{--bg:#0e1330;--surface:#171e45;--ink:#eef0ff;--muted:#a9b1d6;--line:#2b3566;--brand:#7c8cff;--on-brand:#0e1330;--gold:#ffc83d;--on-gold:#14204a;--soft:#1e2759}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 Onest,system-ui,sans-serif}
+h1,h2,h3{font-family:Unbounded,Onest,sans-serif;line-height:1.15;margin:0 0 .6em;font-weight:700}
+h1{font-size:clamp(28px,6vw,52px)}h2{font-size:clamp(23px,4vw,34px)}h3{font-size:18px}
+p{margin:0 0 1em}
+.w{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+.btn{display:inline-block;background:var(--gold);color:var(--on-gold);font-weight:600;padding:15px 26px;border-radius:12px;text-decoration:none;border:0;font-size:17px;cursor:pointer}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+.hero{padding:40px 0 56px}
+.tag{display:inline-block;background:var(--gold);color:var(--on-gold);font-weight:600;font-size:15px;padding:6px 14px;border-radius:99px;margin-bottom:20px}
+.lead{font-size:19px;color:var(--muted);max-width:640px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.gift{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.gift div{background:var(--brand);color:var(--on-brand);border-radius:18px;padding:20px}
+.gift b{font-family:Unbounded,sans-serif;font-size:44px;display:block;line-height:1}
+.gift small{font-size:15px;opacity:.9}
+.gift span{display:block;font-weight:600;margin-bottom:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card p{margin:0;color:var(--muted);font-size:16px}
+.band{background:var(--soft)}
+.free{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.free li{padding-left:34px;position:relative}
+.free li::before{content:"✓";position:absolute;left:0;top:1px;width:24px;height:24px;border-radius:50%;background:var(--gold);color:var(--on-gold);font-weight:700;text-align:center;line-height:24px;font-size:14px}
+.subj{display:grid;gap:12px}
+.subj .card{display:grid;grid-template-columns:170px 1fr;gap:12px;align-items:center}
+.subj h3{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:var(--soft);padding:5px 12px;border-radius:99px;font-size:15px;font-weight:500}
+.tar{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tar .card{text-align:center}
+.tar .n{font-family:Unbounded,sans-serif;font-size:54px;color:var(--brand);line-height:1}
+.tar .card.top{border:2px solid var(--brand)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;counter-reset:s}
+.steps .card{counter-increment:s}
+.steps .card::before{content:counter(s);font-family:Unbounded,sans-serif;font-size:30px;color:var(--brand);display:block;margin-bottom:6px}
+.note{border-left:5px solid var(--gold);background:var(--surface);padding:18px 22px;border-radius:0 14px 14px 0}
+details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:10px}
+summary{font-weight:600;cursor:pointer}
+details p{margin:10px 0 0;color:var(--muted)}
+.final{background:var(--brand);color:var(--on-brand);text-align:center;border-radius:24px;padding:44px 22px}
+.final .lead{color:inherit;opacity:.9;margin:0 auto 24px}
+footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
+@media(max-width:700px){.gift,.tar{grid-template-columns:1fr}.subj .card{grid-template-columns:1fr}section{padding:40px 0}.btn{width:100%;text-align:center}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.tch{display:grid;grid-template-columns:230px 1fr;gap:16px;align-items:stretch}
+.tabs{display:flex;flex-direction:column;gap:6px;background:var(--surface);border-radius:20px;padding:12px;border:1px solid var(--line)}
+.tabs button{font:500 16px Onest,sans-serif;text-align:left;border:0;background:transparent;color:var(--ink);padding:12px 14px;border-radius:12px;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--soft);color:var(--brand);font-weight:600}
+.tabs button:focus-visible,.sw button:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.stage{display:grid;grid-template-columns:1.1fr 1fr;gap:16px}
+.pic{position:relative;min-height:420px;border-radius:24px;overflow:hidden;background:linear-gradient(180deg,#dfe7ff 0%,#c9d8ff 55%,#3f63ff 100%);display:flex;align-items:center;justify-content:center}
+.ph{width:190px;height:190px;border-radius:50%;background:#fff;color:#2a3fd1;font:700 64px Unbounded,sans-serif;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 40px rgba(42,63,209,.25)}
+.fl{position:absolute;width:92px;height:92px;border-radius:38%;transform:rotate(18deg)}
+.fl::after{content:"";position:absolute;inset:28%;border-radius:50%}
+.f1{left:6%;top:12%;background:#2fa8ff}.f1::after{background:#1b6df0}
+.f2{right:6%;bottom:22%;width:110px;height:110px;background:#ffa31a}.f2::after{background:#ff5a1f}
+.sw{position:absolute;left:14px;right:14px;bottom:14px;background:#fff;border-radius:16px;padding:6px;display:flex;gap:4px;overflow-x:auto}
+.sw button{display:flex;align-items:center;gap:8px;border:0;background:transparent;color:#14204a;font:500 15px Onest,sans-serif;padding:6px 12px 6px 6px;border-radius:12px;cursor:pointer;white-space:nowrap}
+.sw button[aria-pressed=true]{background:#14204a;color:#fff}
+.sw i{width:30px;height:30px;border-radius:50%;background:#dfe7ff;color:#2a3fd1;font:700 13px Onest,sans-serif;font-style:normal;display:flex;align-items:center;justify-content:center}
+.info{display:flex;flex-direction:column;gap:16px}
+.info .card{border-radius:24px}
+.info h3{font-size:24px;margin-bottom:14px}
+.info ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.info li{padding-left:34px;position:relative;font-size:16px}
+.info li::before{content:"✦";position:absolute;left:0;top:0;width:24px;height:24px;border-radius:6px;background:var(--soft);color:var(--brand);text-align:center;line-height:24px;font-size:13px}
+.pill{background:var(--soft);color:var(--brand);font-weight:600;font-size:15px;text-align:center;padding:12px 14px;border-radius:12px;margin-top:auto}
+@media(max-width:860px){.tch{grid-template-columns:1fr}.tabs{flex-direction:row;overflow-x:auto}.tabs button{white-space:nowrap}.stage{grid-template-columns:1fr}.pic{min-height:340px}}
+</style>
+</head>
+<body>
+
+<header class="hero"><div class="w">
+<span class="tag">Подарок к подготовке к ЕГЭ/ОГЭ</span>
+<h1>Подготовка к перечневым олимпиадам — бесплатно, если вы готовитесь к ЕГЭ или ОГЭ с нами</h1>
+<p class="lead">Отдельно эта подготовка не продаётся. Её получают все, кто купил подготовку к ЕГЭ или ОГЭ в Сотке: занятия, материалы и домашние задания с проверкой — без доплаты.</p>
+<div class="cta"><a class="btn" href="#tariffs">Купи подготовку к ЕГЭ/ОГЭ и получи подарок</a><a class="btn alt" href="#program">Что входит в подарок</a></div>
+<div class="gift" aria-label="Сколько олимпиадных предметов в подарок">
+<div><span>Стандарт</span><b>1</b><small>олимпиадный предмет</small></div>
+<div><span>Про</span><b>2</b><small>олимпиадных предмета</small></div>
+<div><span>Про+</span><b>4</b><small>олимпиадных предмета</small></div>
+</div>
+</div></header>
+
+<section class="band"><div class="w">
+<h2>Олимпиады — шанс на преимущество при поступлении. Но разобраться в них непросто</h2>
+<div class="grid">
+<div class="card"><h3>Непонятно, с чего начать</h3><p>Сотни олимпиад, разные уровни и сроки. Легко потратить силы не на то.</p></div>
+<div class="card"><h3>Школьных знаний мало</h3><p>Задания нестандартные: источники, кейсы, эссе. К этому нужно готовиться отдельно.</p></div>
+<div class="card"><h3>Отдельная подготовка — ещё один платёж</h3><p>Олимпиадная подготовка обычно оплачивается отдельно, а бюджет семьи и так занят ЕГЭ или ОГЭ.</p></div>
+<div class="card"><h3>Нет времени на два дела</h3><p>Олимпиады не должны мешать экзаменам. Поэтому подготовка проходит на той же платформе и входит в ту же покупку.</p></div>
+</div>
+</div></section>
+
+<section><div class="w">
+<h2>Один раз купили подготовку — получили и экзамены, и олимпиады</h2>
+<ul class="free">
+<li><b>Бесплатно для пользователей платформы Сотки.</b> Подарок идёт к подготовке к ЕГЭ или ОГЭ, отдельной цены у него нет.</li>
+<li><b>Подготовка сделана для вас.</b> Онлайн-занятия проходят только для пользователей платформы Сотки.</li>
+<li><b>Всё в одном месте.</b> Занятия, конспекты и домашки — на платформе, где вы уже готовитесь к экзаменам.</li>
+<li><b>Домашки проверяют.</b> Тесты — автоматически, письменные работы — вручную. Проверка входит в подарок.</li>
+</ul>
+</div></section>
+
+<section class="band" id="program"><div class="w">
+<h2>Пять предметов и олимпиады текущего сезона</h2>
+<p class="lead">Один предмет — это единая подготовка: общая предметная база плюс практика в форматах нескольких олимпиад. Все олимпиады входят в перечень на сезон 2026/27.</p>
+<div class="subj">
+<div class="card"><h3>Обществознание</h3><div class="chips"><span>«Изумруд»</span><span>РГГУ</span></div></div>
+<div class="card"><h3>Право</h3><div class="chips"><span>Кутафинская</span><span>«Юридические высоты!»</span></div></div>
+<div class="card"><h3>История</h3><div class="chips"><span>«Изумруд»</span><span>РГГУ</span></div></div>
+<div class="card"><h3>Английский язык</h3><div class="chips"><span>РГГУ</span></div></div>
+<div class="card"><h3>Литература</h3><div class="chips"><span>РГГУ</span></div></div>
+</div>
+<p style="margin-top:18px;color:var(--muted);font-size:15px">Мы готовим к олимпиадам текущего сезона, в которые ещё можно успеть включиться, а не ко всем олимпиадам перечня.</p>
+</div></section>
+
+<section id="tariffs"><div class="w">
+<h2>Сколько предметов получите вы</h2>
+<p class="lead">Количество олимпиадных предметов зависит от выбранного тарифа. Предметы вы выбираете сами из пяти доступных.</p>
+<div class="tar">
+<div class="card"><h3>Стандарт</h3><div class="n">1</div><p>предмет в подарок</p></div>
+<div class="card top"><h3>Про</h3><div class="n">2</div><p>предмета в подарок</p></div>
+<div class="card"><h3>Про+</h3><div class="n">4</div><p>предмета в подарок</p></div>
+</div>
+<div class="cta"><a class="btn" href="#">Купи подготовку к ЕГЭ/ОГЭ и получи подарок</a></div>
+</div></section>
+
+<section class="band"><div class="w">
+<h2>Как устроена неделя подготовки</h2>
+<p class="lead">Планируемая нагрузка на один предмет:</p>
+<div class="steps">
+<div class="card"><h3>2 записанные лекции</h3><p>Смотрите, когда удобно. К каждой есть конспект.</p></div>
+<div class="card"><h3>1 онлайн-семинар</h3><p>90 минут практики вместе с преподавателем.</p></div>
+<div class="card"><h3>1 домашнее задание</h3><p>Тест, работа с источниками, кейс или эссе — зависит от предмета.</p></div>
+<div class="card"><h3>Проверка работ</h3><p>Результат и разбор по каждому заданию.</p></div>
+</div>
+<p style="margin-top:20px">Практика начинается с первых занятий. Преподаватели разбирают общую базу и особенности заданий выбранных олимпиад. Подготовка идёт последовательно, занятия не повторяются по кругу: при позднем подключении уже вышедшие материалы изучаете самостоятельно.</p>
+</div></section>
+
+<section><div class="w">
+<h2>Кому подойдёт</h2>
+<div class="grid">
+<div class="card"><h3>Школьникам 9–11 классов</h3><p>Тем, кому интересен предмет и кто хочет использовать олимпиады как дополнительную возможность при поступлении.</p></div>
+<div class="card"><h3>Тем, кто ни разу не участвовал</h3><p>Опыт в олимпиадах не нужен, но нужна школьная база по выбранному предмету.</p></div>
+<div class="card"><h3>Десятиклассникам</h3><p>Есть время познакомиться с форматом и получить опыт участия до выпускного класса.</p></div>
+<div class="card"><h3>Тем, кто готов работать сам</h3><p>Смотреть занятия, читать материалы, делать домашки и выделять на это время.</p></div>
+</div>
+</div></section>
+
+<section><div class="w">
+<h2>Преподаватели: призёры и победители олимпиад</h2>
+<p class="lead">Занятия ведут победители и призёры ВсОШ и перечневых олимпиад.</p>
+<div class="tch">
+<div class="tabs" role="tablist" aria-label="Предметы" id="tabs"></div>
+<div class="stage">
+<div class="pic"><span class="fl f1"></span><span class="fl f2"></span><div class="ph" id="ph" aria-hidden="true"></div><div class="sw" id="sw"></div></div>
+<div class="info"><div class="card"><h3 id="nm"></h3><ul id="ls"></ul></div><div class="pill" id="pl"></div></div>
+</div></div>
+</div></section>
+
+<section class="band"><div class="w">
+<div class="note"><h3>Честно о результате</h3>
+<p>Мы даём подготовку: занятия, материалы, практику и проверку домашних заданий. Они помогают разобраться в олимпиадном формате и подготовиться к участию. Диплом и призовое место мы не гарантируем: результат зависит от исходной подготовки, вашей самостоятельной работы, заданий и конкуренции.</p></div>
+</div></section>
+
+<section><div class="w">
+<h2>Вопросы и ответы</h2>
+<details><summary>Сколько стоит подготовка к олимпиадам?</summary><p>Отдельной цены нет. Подготовка к олимпиадам — подарок к подготовке к ЕГЭ или ОГЭ.</p></details>
+<details><summary>Можно ли купить только олимпиадную подготовку?</summary><p>Нет, отдельно она не продаётся. Её получают те, кто купил подготовку к ЕГЭ или ОГЭ в Сотке.</p></details>
+<details><summary>Сколько предметов я получу?</summary><p>На тарифе Стандарт — 1, на Про — 2, на Про+ — 4. Выбираете из обществознания, права, истории, английского языка и литературы.</p></details>
+<details><summary>Как долго работает доступ?</summary><p>Пока действует оплаченный доступ к подготовке в Сотке. Оплатить можно за месяц или сразу на более длительный срок.</p></details>
+<details><summary>Можно ли совмещать с подготовкой к ЕГЭ или ОГЭ?</summary><p>Да, она идёт вместе с подготовкой и на той же платформе. Важно распределить нагрузку и заниматься регулярно, а не в последний момент.</p></details>
+<details><summary>Когда стартуют занятия и какое расписание семинаров?</summary><p>Даты открытия материалов и расписание онлайн-семинаров объявим дополнительно, сразу после утверждения.</p></details>
+<details><summary>Гарантируете ли вы диплом олимпиады?</summary><p>Нет. Мы отвечаем за подготовку: занятия, материалы, практику и проверку. Результат зависит и от ваших усилий.</p></details>
+</div></section>
+
+<section><div class="w"><div class="final">
+<h2>Готовьтесь к экзаменам, а олимпиады — в подарок</h2>
+<p class="lead">Купите подготовку к ЕГЭ или ОГЭ в Сотке и выберите олимпиадные предметы по своему тарифу.</p>
+<a class="btn" href="#">Купи подготовку к ЕГЭ/ОГЭ и получи подарок</a>
+</div></div></section>
+
+<footer><div class="w">Онлайн-школа «Сотка». Условия и даты могут уточняться.</div></footer>
+<script>
+(function(){
+var D=[
+['Обществознание',[
+['Татьяна Ильина','Т.И.','748 дипломов перечневых у пользователей платформы и команды',['Абсолютная победительница «Высшей пробы» по социологии, призёрка по политологии, обществознанию и философии.','Призёрка олимпиады СПбГУ по обществознанию и социологии.','Победительница олимпиад РАНХиГС и «Миссия выполнима», победительница регионального этапа ВсОШ по обществознанию.','Вместе с командой подготовила пользователей платформы, завоевавших 748 дипломов перечневых олимпиад по обществознанию, социологии, философии и политологии за сезоны 2024/25–2025/26.']],
+['Максим Королёв','М.К.','Победитель «Высшей пробы» по философии и социологии',['Победитель олимпиады РАНХиГС по обществознанию, призёр по истории и политологии.','Победитель «Высшей пробы» по философии и социологии, призёр по обществознанию.','Призёр «Миссии выполнима» по обществознанию и «Ломоносова» по философии.']]]],
+['Право',[
+['София Ширягина','С.Ш.','122+ диплома у пользователей платформы за сезон 2025/26',['Двукратная призёрка ЗЭ ВсОШ, дипломантка множества перечневых, студентка МГИМО.','Преподаватель олимпиадного права.','Вместе с командой подготовила пользователей платформы, завоевавших не менее 122 дипломов перечневых олимпиад по праву за сезон 2025/26: 20 победительских и 102 призовых.']]]],
+['История',[
+['Ирина Капитонова','И.К.','Трёхкратная призёрка заключительного этапа ВсОШ',['Трёхкратная призёрка заключительного этапа ВсОШ по истории: 2017, 2019 и 2020 годов.','Обладательница дипломов I степени «Высшей пробы», «Ломоносова», олимпиады СПбГУ и Московской олимпиады школьников.','Окончила бакалавриат и магистратуру МГИМО по направлению «Зарубежное регионоведение».','Научная специализация: Северная Европа, особенно Норвегия, политика памяти и исследования политических образов.']]]],
+['Английский язык',[
+['Дарья Волкова','Д.В.','234+ диплома перечневых у пользователей платформы и команды',['Двукратная призёрка заключительного этапа ВсОШ, дипломантка множества перечневых олимпиад.','На протяжении трёх лет её пользователи платформы становятся дипломантами заключительного этапа ВсОШ и перечневых олимпиад.','Вместе с Селеной Савиновой и командой: 234+ диплома перечневых олимпиад, 3 победителя и 14 призёров заключительного этапа ВсОШ за сезоны 2023/24–2025/26.']],
+['Ирина Муллина','И.М.','Призёр заключительного этапа ВсОШ',['Призёр заключительного этапа ВсОШ.','Победитель Евразийской лингвистической олимпиады и «Миссии выполнима».','Призёр «Высшей пробы», «Ломоносова», олимпиады КФУ.']],
+['Ксения Труфанова','К.Т.','Победитель Плехановской олимпиады',['Победитель Плехановской олимпиады.']]]],
+['Литература',[
+['Валерия Куликова','В.К.','Призёр заключительного этапа ВсОШ',['Призёр заключительного этапа ВсОШ.','Участница ОЦ «Сириус».','Выпускница «Летово».']]]]
+];
+var tabs=document.getElementById('tabs'),sw=document.getElementById('sw'),ph=document.getElementById('ph'),nm=document.getElementById('nm'),ls=document.getElementById('ls'),pl=document.getElementById('pl');
+var si=0,ti=0;
+function mk(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;return e}
+function show(){
+var T=D[si][1][ti];
+ph.textContent=T[1];nm.textContent=T[0];pl.textContent=T[2];ls.textContent='';
+T[3].forEach(function(b){ls.appendChild(mk('li','',b))});
+Array.prototype.forEach.call(tabs.children,function(b,i){b.setAttribute('aria-selected',i==si)});
+sw.textContent='';
+D[si][1].forEach(function(t,i){var b=mk('button');b.type='button';b.setAttribute('aria-pressed',i==ti);b.appendChild(mk('i','',t[1].charAt(0)+t[1].charAt(2)));b.appendChild(document.createTextNode(t[0].split(' ')[0]));b.onclick=function(){ti=i;show()};sw.appendChild(b)});
+}
+D.forEach(function(s,i){var b=mk('button','',s[0]);b.type='button';b.setAttribute('role','tab');b.onclick=function(){si=i;ti=0;show()};tabs.appendChild(b)});
+show();
+})();
+</script>
+</body>
+</html>
